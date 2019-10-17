@@ -13,7 +13,7 @@ body {
 
 #calculator {
   width: 320px;
-  height: 520px;
+  height: 525px;
   background-color: #eaedef;
   margin: 0 auto;/*center calculator-container horizontally*/
   position: relative;
@@ -24,12 +24,15 @@ body {
 
 #result {
   height: 120px;
+/*  margin: 5px;
+  border-radius: 5px;
+  background-color: white;*/
 }
 
 #history {
   text-align: right;
   height: 20px;
-  margin: 0 20px
+  margin: 0 20px;
   padding-top: 20px;
   font-size: 15px;
   color: #919191;
