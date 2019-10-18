@@ -11,7 +11,7 @@ function getOutput(){
 }
 
 function printOutput(num){
-  if(num==""){
+  if(num == ""){
     document.getElementById("output-value").innerText=num;
   }
   else{
@@ -29,4 +29,13 @@ function reverseNumberFormat(num){
   return Number(num.replace(/,/g,''))
 }
 
-alert(reverseNumberFormat(getOutput()));
+
+
+
+const operator = document.getElementsByClassName("operator")
+for(const i = 0; i < operator.length; i++){
+  operator[i].addEventListener('click', function(){
+    alert("The user clicked:" + this.id);
+  })
+}
+
