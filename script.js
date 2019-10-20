@@ -1,10 +1,13 @@
 function getHistory(){
   return document.getElementById("history-value").innerText;
-}
+};
+// alert(getHistory());
 
 function printHistory(num){
-  document.getElementById("history-value").innerText=num;
-}
+  document.getElementById("history-value").innerText = num;
+};
+
+// printHistory("4*4");
 
 function getOutput(){
   return document.getElementById("output-value").innerText;
