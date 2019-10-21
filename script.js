@@ -15,10 +15,10 @@ function getOutput(){
 
 function printOutput(num){
   if(num == ""){
-    document.getElementById("output-value").innerText=num;
+    document.getElementById("output-value").innerText = num;
   }
   else{
-  document.getElementById("output-value").innerText=getFormattedNumber(num);
+  document.getElementById("output-value").innerText = getFormattedNumber(num);
   }
 }
 
@@ -80,7 +80,7 @@ for(let i = 0; i < operator.length; i++){
       }
     }
   })
-}
+};
 
 let number = document.getElementsByClassName("number")
 for(let i = 0; i < number.length; i++){

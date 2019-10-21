@@ -15,7 +15,7 @@ body {
   width: 320px;
   height: 525px;
   background-color: #eaedef;
-  margin: 0 auto;/*center calculator-container horizontally*/
+  margin: 0 auto; /*center calculator-container horizontally*/
   position: relative;
   top: 15px;
   border-radius: 5px;
@@ -60,7 +60,7 @@ body {
   font-size: 15px;
 }
 
-.number, .empty {
+.number, .empty { /*if number is empty take same backgroundcolor as calculator container*/
   background-color: #eaedef;
 }
 
