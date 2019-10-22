@@ -18,7 +18,7 @@ function printOutput(num){
     document.getElementById("output-value").innerText = num;
   }
   else{
-  document.getElementById("output-value").innerText = getFormattedNumber(num);
+    document.getElementById("output-value").innerText = getFormattedNumber(num);
   }
 }
 
@@ -28,17 +28,17 @@ function getFormattedNumber(num){
   };
   let n = Number(num);
   let value = n.toLocaleString("en");
-  return value
+  return value;
 }
 
 function reverseNumberFormat(num){
-  return Number(num.replace(/,/g,''))
+  return Number(num.replace(/,/g,''));
 }
 
 
 
 
-let operator = document.getElementsByClassName("operator")
+let operator = document.getElementsByClassName("operator");
 for(let i = 0; i < operator.length; i++){
   operator[i].addEventListener('click', function(){
     // alert("The operator clicked:" + this.id);
@@ -46,7 +46,7 @@ for(let i = 0; i < operator.length; i++){
       printHistory("");
       printOutput("");
     }
-    if(this.id == "backspace"){
+    else if(this.id == "backspace"){
       let output = reverseNumberFormat(getOutput()).toString();
       if(output){ // if output has a value
         output = output.substr(0,output.length-1);
@@ -79,10 +79,10 @@ for(let i = 0; i < operator.length; i++){
         }
       }
     }
-  })
+  });
 };
 
-let number = document.getElementsByClassName("number")
+let number = document.getElementsByClassName("number");
 for(let i = 0; i < number.length; i++){
   number[i].addEventListener('click', function(){
     // alert("The number clicked:" + this.id);
@@ -93,4 +93,3 @@ for(let i = 0; i < number.length; i++){
     }
   });
 }
-
