@@ -87,7 +87,7 @@ for(let i = 0; i < number.length; i++){
   number[i].addEventListener('click', function(){
     // alert("The number clicked:" + this.id);
     let output = reverseNumberFormat(getOutput());
-    if(output! = NaN) { // if number is a number
+    if(output != NaN) { // if number is a number
       output = output + this.id;
       printOutput(output);
     }
