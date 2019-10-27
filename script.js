@@ -22,23 +22,24 @@ function getOutput(){
 
 // function to print the output of the calculator
 function printOutput(num){
-  if(num == ""){
+  if(num == ""){ // if the number is empty, set the output to empty
     document.getElementById("output-value").innerText = num;
   }
-  else{
-    document.getElementById("output-value").innerText = getFormattedNumber(num);
+  else{ // else (if the numbe3r is not empty), we convert it to a comma-separated value
+    document.getElementById("output-value").innerText = getFormattedNumber(num); // for this function see below
   }
 }
 
 // following alert statement is for testing purposes
 // printOutput("444");
 
+// function that reads the value and returns the comma-separated value for better readability
 function getFormattedNumber(num){
   if(num == "-"){
     return "";
   };
   let n = Number(num);
-  let value = n.toLocaleString("en");
+  let value = n.toLocaleString("en"); // returns number as local sting (here english -> "en")
   return value;
 }
 
