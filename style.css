@@ -29,7 +29,8 @@ body {
 
 #result {
   height: 120px;
-/*  margin: 5px;
+  /*maybe highlight the result window with white*/
+/*margin: 5px;
   border-radius: 5px;
   background-color: white;*/
 }
@@ -37,7 +38,7 @@ body {
 #history {
   text-align: right;
   height: 20px;
-  margin: 0 20px;
+  margin: 0 20px; /*no margin on top and bottom, but 20px on each side*/
   padding-top: 20px;
   font-size: 15px;
   color: #919191;
@@ -46,8 +47,8 @@ body {
 #output {
   text-align: right;
   height: 60px;
-  margin: 10px 20px;
-  font-size: 30px;
+  margin: 10px 20px; /*10px margin on top and bottom and 20px on each side*/
+  font-size: 30px; /*bigger font to make it stand out*/
 }
 
 #keyboard {
