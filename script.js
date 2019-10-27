@@ -65,17 +65,16 @@ for(let i = 0; i < operator.length; i++){
       printOutput("");
     }
     else if(this.id == "backspace"){ // if the user clicks on the backspace (CE), the commas on the number have to be set again
-      let output = reverseNumberFormat(getOutput()).toString();
+      let output = reverseNumberFormat(getOutput()).toString(); // and it should be converted to a number
       if(output){ // if output has a value
-        output = output.substr(0,output.length-1);
-        printOutput(output);
-
+        output = output.substr(0,output.length-1); // remove the last character
+        printOutput(output); // print it back
       }
     }
     else{
-      let output = getOutput();
+      let output = getOutput(); // declare output and history values
       let history = getHistory();
-      if(output == "" && history != ""){
+      if(output == "" && history != ""){ // it has to be checked if the output/history is empty, because if yes we cannot proceed
         if(isNaN(history[history.length-1])){
           history = history.substr(0, history.length-1);
         }
@@ -83,16 +82,16 @@ for(let i = 0; i < operator.length; i++){
       if(output != "" || history != ""){
         // condition? true : false
         output = output == ""? output : reverseNumberFormat(output);
-        history = history + output;
-        if(this.id == "="){
-          let result = eval(history);
-          printOutput(result);
-          printHistory("");
+        history = history + output; // output is added to the history value
+        if(this.id == "="){ // if user clicks on the equal sign
+          let result = eval(history); // then history is evaluated
+          printOutput(result); // the result is printed in the output
+          printHistory(""); // and the history is set to empty
         }
-        else{
-          history = history + this.id;
-          printHistory(history);
-          printOutput("");
+        else{ // for other operators
+          history = history + this.id; // the operator is added to the history
+          printHistory(history); // the history is printes
+          printOutput(""); // and the output is set to empty
 
         }
       }
