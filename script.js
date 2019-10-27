@@ -52,16 +52,19 @@ function reverseNumberFormat(num){
 // alert(reverseNumberFormat(getOutput()));
 
 
-
+// save all the operators in a variable
 let operator = document.getElementsByClassName("operator");
+
+// iterate over all operators
 for(let i = 0; i < operator.length; i++){
-  operator[i].addEventListener('click', function(){
+  operator[i].addEventListener('click', function(){ // give a click event-listener to all of them
+    // following alert statement is for testing purposes
     // alert("The operator clicked:" + this.id);
-    if(this.id == "clear"){
-      printHistory("");
+    if(this.id == "clear"){ // if the user clicks on the clear operator, delete everything from the result window
+      printHistory(""); // both history and output are deleted
       printOutput("");
     }
-    else if(this.id == "backspace"){
+    else if(this.id == "backspace"){ // if the user clicks on the backspace (CE), the commas on the number have to be set again
       let output = reverseNumberFormat(getOutput()).toString();
       if(output){ // if output has a value
         output = output.substr(0,output.length-1);
@@ -97,14 +100,18 @@ for(let i = 0; i < operator.length; i++){
   });
 };
 
+// save all the numbers in a variable
 let number = document.getElementsByClassName("number");
+
+// iterate over all numbers
 for(let i = 0; i < number.length; i++){
-  number[i].addEventListener('click', function(){
+  number[i].addEventListener('click', function(){ // give a click event-listener to all of them
+    // following alert statement is for testing purposes
     // alert("The number clicked:" + this.id);
-    let output = reverseNumberFormat(getOutput());
-    if(output != NaN) { // if number is a number
-      output = output + this.id;
-      printOutput(output);
+    let output = reverseNumberFormat(getOutput()); //removes commas from output
+    if(output != NaN) { // check if output is a number
+      output = output + this.id; // concatenate the id to the output
+      printOutput(output); // and print it
     }
   });
 }
