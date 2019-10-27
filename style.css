@@ -15,15 +15,16 @@ body {
   border-radius: 10px;
 }
 
+/*container of calculator*/
 #calculator {
   width: 320px;
   height: 525px;
   background-color: #eaedef;
-  margin: 0 auto; /*center calculator-container horizontally*/
+  margin: 0 auto; /*centers calculator-container horizontally*/
   position: relative;
-  top: 15px;
+  top: 15px; /*adds space on the top (only works with position relative) */
   border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2)
+  box-shadow: 0 /*x offset*/ 4px /*y offset*/ 8px /*blur*/ 0 /*spread*/ rgba(0,0,0,0.2) /*color*/, 0 6px 20px 0 rgba(0,0,0,0.2)
 }
 
 #result {
