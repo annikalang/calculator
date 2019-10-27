@@ -1,12 +1,16 @@
 body {
+  /*define font and background on the whole page*/
   font-family: 'Oswald', sans-serif;
   background-color: white;
 }
 
+/*container (lego) that contains the calculator as an extra container */
 #container {
   width: 1000px;
   height: 550px;
+  /*lego background image*/
   background-image: url(https://images.unsplash.com/photo-1516641051054-9df6a1aad654?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80);
+  /*top and bottom spacing is set to 50px, left and right ist auto, so it's centered horizontally*/
   margin: 50px auto;
   border-radius: 10px;
 }
