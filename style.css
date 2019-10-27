@@ -55,7 +55,7 @@ body {
   height: 400px;
 }
 
-.operator, .number, .empty {
+.operator, .number, .empty { /*styling the operators, numbers and empty fields alls the same*/
   width: 50px;
   height: 50px;
   margin: 15px;
@@ -66,15 +66,15 @@ body {
   font-size: 15px;
 }
 
-.number, .empty { /*if number is empty take same backgroundcolor as calculator container*/
+.number, .empty { /*number and empty fields take same backgroundcolor as calculator container*/
   background-color: #eaedef;
 }
 
-.number, .operator {
+.number, .operator { /*numbers and operators appear clickable for the cursors*/
   cursor: pointer;
 }
 
-.operator:active, .number:active {
+.operator:active, .number:active { /*when numbers and operators are clicked (active), the font-size increases*/
   font-size: 17px;
 }
 
@@ -82,7 +82,7 @@ body {
   outline: 0;
 }
 
-button:nth-child(4) { /* selects the fourth child of the button class */
+button:nth-child(4) { /* selects the fourth (etc.) child of the button class */
   font-size: 20px;
   background-color: deeppink;
 }
