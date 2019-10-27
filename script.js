@@ -74,14 +74,14 @@ for(let i = 0; i < operator.length; i++){
     else{
       let output = getOutput(); // declare output and history values
       let history = getHistory();
-      if(output == "" && history != ""){ // it has to be checked if the output/history is empty, because if yes we cannot proceed
-        if(isNaN(history[history.length-1])){
-          history = history.substr(0, history.length-1);
+      if(output == "" && history != ""){ // it has to be checked if the output is empty, because if yes we cannot proceed
+        if(isNaN(history[history.length-1])){ // check if the last character is an operator (NaN means Not a Number)
+          history = history.substr(0, history.length-1); // remove the last character using the substring function
         }
       }
-      if(output != "" || history != ""){
+      if(output != "" || history != ""){ // if the ouput or the history is not empty
         // condition? true : false
-        output = output == ""? output : reverseNumberFormat(output);
+        output = output == ""? output : reverseNumberFormat(output); // if output is empty, output must be set to an empty value
         history = history + output; // output is added to the history value
         if(this.id == "="){ // if user clicks on the equal sign
           let result = eval(history); // then history is evaluated
