@@ -1,18 +1,26 @@
+// function to get the history value and its id
 function getHistory(){
   return document.getElementById("history-value").innerText;
 };
+
+// following alert statement is for testing purposes
 // alert(getHistory());
 
+
+// function to print the history value
 function printHistory(num){
   document.getElementById("history-value").innerText = num;
 };
 
+// following alert statement is for testing purposes
 // printHistory("4*4");
 
+// function to get the ouput value of the calculator
 function getOutput(){
   return document.getElementById("output-value").innerText;
 }
 
+// function to print the output of the calculator
 function printOutput(num){
   if(num == ""){
     document.getElementById("output-value").innerText = num;
@@ -21,6 +29,9 @@ function printOutput(num){
     document.getElementById("output-value").innerText = getFormattedNumber(num);
   }
 }
+
+// following alert statement is for testing purposes
+// printOutput("444");
 
 function getFormattedNumber(num){
   if(num == "-"){
