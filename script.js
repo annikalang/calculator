@@ -35,8 +35,8 @@ function printOutput(num){
 
 // function that reads the value and returns the comma-separated value for better readability
 function getFormattedNumber(num){
-  if(num == "-"){
-    return "";
+  if(num == "-"){ // if there is a minus sign
+    return ""; // then just return and empty value
   };
   let n = Number(num);
   let value = n.toLocaleString("en"); // returns number as local sting (here english -> "en")
