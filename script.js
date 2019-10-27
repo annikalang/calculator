@@ -30,7 +30,7 @@ function printOutput(num){
   }
 }
 
-// following alert statement is for testing purposes
+// following method statement is for testing purposes
 // printOutput("444");
 
 // function that reads the value and returns the comma-separated value for better readability
@@ -43,10 +43,13 @@ function getFormattedNumber(num){
   return value;
 }
 
+// function to convert comma-separated value from above into a normal number
 function reverseNumberFormat(num){
-  return Number(num.replace(/,/g,''));
+  return Number(num.replace(/,/g,'')); //replacing the comma (in between slashes and g -> '/x/g') with an empty character (given after the comma as the second argument)
 }
 
+// following alert statement is for testing purposes
+// alert(reverseNumberFormat(getOutput()));
 
 
 
